@@ -25,7 +25,7 @@ function loadWasm(pathToWasm) {
 ## Use exported function
 When loaded, this package adds function `generateQrCode` to `window` object. Just call it with a single parameter containing URL or text to be encoded. The function will return base64 encoded string with QR code.
 ````js
-await loadWasm('./main.wasm')
+await loadWasm('./build/go-qr-code-generator.wasm')
 const base64QRCode = generateQrCode('https://ros-plata.ru')
 ````
 
