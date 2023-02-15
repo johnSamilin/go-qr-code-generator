@@ -10,7 +10,7 @@ First of all, include script `./wasm_exec.js` to your webpage.
 function loadWasm(pathToWasm) {
     const go = new Go()
     return new Promise((resolve, reject) => {
-        WebAssembly.instantiateStreaming(fetch(path), go.importObject)
+        WebAssembly.instantiateStreaming(fetch(pathToWasm), go.importObject)
             .then(result => {
                 go.run(result.instance)
                 resolve(result.instance)
