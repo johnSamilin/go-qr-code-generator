@@ -34,3 +34,10 @@ const base64QRCode = generateQrCode('https://ros-plata.ru')
 const image = document.querySelector('img#qr')
 image.setAttribute('src', `data:image/png;base64,${base64QrCode}`)
 ````
+
+# Development
+- `git clone`
+- run `go get`
+- do changes
+- run `GOOS=js GOARCH=wasm go build -o  ./build/go-qr-code-generator.wasm`
+See [this article](https://golangbot.com/webassembly-using-go/) for details.
